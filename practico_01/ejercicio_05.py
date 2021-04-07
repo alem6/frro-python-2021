@@ -9,7 +9,14 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
 
     Restricciones: No usar bibliotecas auxiliares (Numpy, math, pandas).
     """
-    pass # Completar
+    multi=1 
+    if len(numeros) !=0:
+       for nume in numeros:
+           multi=multi*nume
+       return multi
+
+    return 0 
+
 
 
 # NO MODIFICAR - INICIO
@@ -31,8 +38,11 @@ def multiplicar_reduce(numeros: Iterable[float]) -> float:
     """CHALLENGE OPCIONAL - Re-escribir utilizando reduce.
     Referencia: https://docs.python.org/3.8/library/functools.html#functools.reduce
     """
-    pass # Completar
-
+    nu=numeros
+    if len(nu)!=0:
+       valor=reduce(lambda x,y: x * y, nu)
+       return valor
+    return 0   
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
